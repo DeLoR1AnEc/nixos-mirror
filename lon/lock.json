@@ -1,0 +1,205 @@
+{
+  "version": "1",
+  "sources": {
+    "crane": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "ipetkov",
+      "repo": "crane",
+      "branch": "master",
+      "revision": "7cf72d978629469c4bd4206b95c402514c1f6000",
+      "url": "https://github.com/ipetkov/crane/archive/7cf72d978629469c4bd4206b95c402514c1f6000.tar.gz",
+      "hash": "sha256-SPm9ck7jh3Un9nwPuMGbRU04UroFmOHjLP56T10MOeM="
+    },
+    "den": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "vic",
+      "repo": "den",
+      "branch": "main",
+      "revision": "927f4d8e2be40d05c976a91bbec66238c622bbf5",
+      "url": "https://github.com/vic/den/archive/927f4d8e2be40d05c976a91bbec66238c622bbf5.tar.gz",
+      "hash": "sha256-RNbDvS6voiq2GalVHRt6w2EpdlEmmCjUAb6fvPO9PnE="
+    },
+    "disko": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nix-community",
+      "repo": "disko",
+      "branch": "master",
+      "revision": "5ad85c82cc52264f4beddc934ba57f3789f28347",
+      "url": "https://github.com/nix-community/disko/archive/5ad85c82cc52264f4beddc934ba57f3789f28347.tar.gz",
+      "hash": "sha256-PAqwnsBSI9SVC2QugvQ3xeYCB0otOwCacB1ueQj2tgw="
+    },
+    "import-tree": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "vic",
+      "repo": "import-tree",
+      "branch": "main",
+      "revision": "c41e7d58045f9057880b0d85e1152d6a4430dbf1",
+      "url": "https://github.com/vic/import-tree/archive/c41e7d58045f9057880b0d85e1152d6a4430dbf1.tar.gz",
+      "hash": "sha256-BtZ2dtkBdSUnFPPFc+n0kcMbgaTxzFNPv2iaO326Ffg="
+    },
+    "lanzaboote": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nix-community",
+      "repo": "lanzaboote",
+      "branch": "master",
+      "revision": "29d2cca7fc3841708c1d48e2d1272f79db1538b6",
+      "url": "https://github.com/nix-community/lanzaboote/archive/29d2cca7fc3841708c1d48e2d1272f79db1538b6.tar.gz",
+      "hash": "sha256-mWn8D/oXXAaqeFFFRorKHvTLw5V9M8eYzAWRr4iffag="
+    },
+    "lix": {
+      "type": "Git",
+      "fetchType": "git",
+      "branch": "main",
+      "revision": "9899ed29cc28f274402b7d01de67cfd4286f59dd",
+      "url": "https://git.lix.systems//lix-project/lix",
+      "hash": "sha256-Lm1fdQl+YiEqKOqDY2z5K2RJqboh4R+YF+qPWqfYvGo=",
+      "lastModified": 1775940134,
+      "submodules": false
+    },
+    "lix-module": {
+      "type": "Git",
+      "fetchType": "git",
+      "branch": "main",
+      "revision": "5e56f5a973e24292b125dca9e9d506b0a91d6903",
+      "url": "https://git.lix.systems//lix-project/nixos-module",
+      "hash": "sha256-y9kC3ff89btXS8RD6pAtM50g0qtsim1I8HXBtgSqdbI=",
+      "lastModified": 1773460763,
+      "submodules": false
+    },
+    "nie": {
+      "type": "Git",
+      "fetchType": "git",
+      "branch": "main",
+      "revision": "3b3d6e061da1ea90412539bb18aaef8bca234ef3",
+      "url": "https://codeberg.org//jzbor/nie",
+      "hash": "sha256-HVuRSM5hle/tu45PnGldHH9bvzoZYxrVNXToGfYiwEE=",
+      "lastModified": 1775766921,
+      "submodules": false
+    },
+    "nix-index-database": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nix-community",
+      "repo": "nix-index-database",
+      "branch": "main",
+      "revision": "bedba5989b04614fc598af9633033b95a937933f",
+      "url": "https://github.com/nix-community/nix-index-database/archive/bedba5989b04614fc598af9633033b95a937933f.tar.gz",
+      "hash": "sha256-7jt9Vpm48Yy5yAWigYpde+HxtYEpEuyzIQJF4VYehhk="
+    },
+    "nix-maid": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "viperML",
+      "repo": "nix-maid",
+      "branch": "master",
+      "revision": "993d95a0a5b2f4b06faa022b32112b699ca3bbfd",
+      "url": "https://github.com/viperML/nix-maid/archive/993d95a0a5b2f4b06faa022b32112b699ca3bbfd.tar.gz",
+      "hash": "sha256-pLCCqY/0JC7QdWqyEyDEvGl63f9aS8zrFLVJW7gUMKI="
+    },
+    "nixos-facter": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nix-community",
+      "repo": "nixos-facter",
+      "branch": "main",
+      "revision": "678230c0f88d350284d5a5528a4a3f9822dbaf34",
+      "url": "https://github.com/nix-community/nixos-facter/archive/678230c0f88d350284d5a5528a4a3f9822dbaf34.tar.gz",
+      "hash": "sha256-PH/uZ86ESYQSr7/VREA+DCIeQlTOps5c1R9i8UJ/gt4="
+    },
+    "nixos-hardware": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nixos",
+      "repo": "nixos-hardware",
+      "branch": "master",
+      "revision": "c775c2772ba56e906cbeb4e0b2db19079ef11ff7",
+      "url": "https://github.com/nixos/nixos-hardware/archive/c775c2772ba56e906cbeb4e0b2db19079ef11ff7.tar.gz",
+      "hash": "sha256-2ZBhDNZZwYkRmefK5XLOusCJHnoeKkoN95hoSGgMxWM="
+    },
+    "nixpkgs": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nixos",
+      "repo": "nixpkgs",
+      "branch": "nixos-unstable",
+      "revision": "4c1018dae018162ec878d42fec712642d214fdfa",
+      "url": "https://github.com/nixos/nixpkgs/archive/4c1018dae018162ec878d42fec712642d214fdfa.tar.gz",
+      "hash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E="
+    },
+    "nixpkgs-stable": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nixos",
+      "repo": "nixpkgs",
+      "branch": "nixos-25.11",
+      "revision": "54170c54449ea4d6725efd30d719c5e505f1c10e",
+      "url": "https://github.com/nixos/nixpkgs/archive/54170c54449ea4d6725efd30d719c5e505f1c10e.tar.gz",
+      "hash": "sha256-t+HZK42pB6N+i5RGbuy7Xluez/VvWbembBdvzsc23Ss="
+    },
+    "noctalia-shell": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "noctalia-dev",
+      "repo": "noctalia-shell",
+      "branch": "main",
+      "revision": "e56a9db57ed61ea248f109edd60965faf56d3da2",
+      "url": "https://github.com/noctalia-dev/noctalia-shell/archive/e56a9db57ed61ea248f109edd60965faf56d3da2.tar.gz",
+      "hash": "sha256-ie3vFwg0eZTTHBDCRm+ee/PecbtdPn/pyL6hlotAfeQ="
+    },
+    "preservation": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "nix-community",
+      "repo": "preservation",
+      "branch": "main",
+      "revision": "93416f4614ad2dfed5b0dcf12f27e57d27a5ab11",
+      "url": "https://github.com/nix-community/preservation/archive/93416f4614ad2dfed5b0dcf12f27e57d27a5ab11.tar.gz",
+      "hash": "sha256-mMI9IanU+Xw+pVogD2oT0I2kTmvz2Un/Apc5+CwUpEY="
+    },
+    "rust-overlay": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "oxalica",
+      "repo": "rust-overlay",
+      "branch": "master",
+      "revision": "753568957a87312ed599cba5699e67126eded6c0",
+      "url": "https://github.com/oxalica/rust-overlay/archive/753568957a87312ed599cba5699e67126eded6c0.tar.gz",
+      "hash": "sha256-Cp8XrVLGruSDBTRs8L4LmvaEcd76tHHU9esLk7Ysa4E="
+    },
+    "sops-nix": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "Mic92",
+      "repo": "sops-nix",
+      "branch": "master",
+      "revision": "31ac5fe5d015f76b54058c69fcaebb66a55871a4",
+      "url": "https://github.com/Mic92/sops-nix/archive/31ac5fe5d015f76b54058c69fcaebb66a55871a4.tar.gz",
+      "hash": "sha256-VKp9bhVSm0bT6JWctFy06ocqxGGnWHi1NfoE90IgIcY="
+    },
+    "sysc-greet": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "Nomadcxx",
+      "repo": "sysc-greet",
+      "branch": "master",
+      "revision": "1d7318048bc68ef98842544e59f780900d420c2b",
+      "url": "https://github.com/Nomadcxx/sysc-greet/archive/1d7318048bc68ef98842544e59f780900d420c2b.tar.gz",
+      "hash": "sha256-4m+QJHx5zCpXXzfCIolm/56m7cxtIe/7U0y5DqmYNrU="
+    },
+    "with-inputs": {
+      "type": "GitHub",
+      "fetchType": "tarball",
+      "owner": "vic",
+      "repo": "with-inputs",
+      "branch": "main",
+      "revision": "b4cbe858b381c0ee0fe617498549f0562090ad04",
+      "url": "https://github.com/vic/with-inputs/archive/b4cbe858b381c0ee0fe617498549f0562090ad04.tar.gz",
+      "hash": "sha256-GgKZ4LyKDS9vd946UeArhYqBKw63LdH4JqfbfFf7qNw="
+    }
+  }
+}
