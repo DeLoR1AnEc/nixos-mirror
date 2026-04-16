@@ -3,7 +3,7 @@
     inputs:
     (inputs.nixpkgs.lib.evalModules {
       specialArgs.inputs = inputs;
-      modules = [ (inputs.imort-tree ./modules )];
+      modules = [ (inputs.import-tree ./modules )];
     }).config.flake;
 
   inputs = {
@@ -24,15 +24,11 @@
     nixos-facter.url = "github:nix-community/nixos-facter";
     disko.url = "github:nix-community/disko";
 
-    # Misc
-    nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-alien.url = "github:nix-community/nix-alien";
-
     # Programms
     sops-nix.url = "github:Mic92/sops-nix";
     sysc-greet.url = "github:Nomadcxx/sysc-greet";
     lanzaboote.url = "github:nix-community/lanzaboote";
     preservation.url = "github:nix-community/preservation";
-    noctalia-shell.url = "github:noctalia-dev/noctalia-shell";
+    nix-index-database.url = "github:nix-community/nix-index-database";
   };
 }

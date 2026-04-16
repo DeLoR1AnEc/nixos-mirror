@@ -10,6 +10,7 @@
         nushell
         python3
         git
+        gum
 
         # System Monitoring
         fastfetch
@@ -79,7 +80,6 @@
         psutils
         psmisc
         pciutils
-        gum
       ];
     };
 }

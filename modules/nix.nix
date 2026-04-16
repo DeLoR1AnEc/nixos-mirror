@@ -5,8 +5,6 @@
     {
       imports = [ inputs.nix-index-database.nixosModules.default ];
 
-      environment.systemPackages = [ inputs.nie.packages.${pkgs.system}.default ];
-
       nixpkgs.config.allowUnfree = true;
       programs.nix-index-database.comma.enable = true;
       programs.nix-ld.enable = true;
@@ -19,6 +17,8 @@
       };
 
       nix = {
+        package = pkgs.lixPackageSets.latest.lix;
+
         optimise.automatic = true;
         optimise.dates = "weekly";
 

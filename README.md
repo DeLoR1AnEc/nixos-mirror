@@ -1,6 +1,3 @@
-## Install
-
-## Switch
-```
-sudo (nix-build --no-out-link -A nixosConfigurations.electron.config.system.build.toplevel)/bin/switch-to-configuration switch
-```
+# TODO
+- [x] (Add noctalia to launch at startup in niri config)
+- [ ] (Investigate home preservation)
