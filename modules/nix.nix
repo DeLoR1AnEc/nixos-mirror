@@ -27,8 +27,17 @@
           keep-derivations = true;
           use-xdg-base-directories = true;
           auto-optimise-store = true;
+          trusted-trusted-users = [ "@wheel" ];
 
-          experimental-features = [ "nix-command" ];
+          experimental-features = [ "nix-command" "flakes" ];
+
+          trusted-substituters = [
+            "https://nix-community.cachix.org"
+          ];
+          trusted-public-keys = [
+            "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+          ];
+
         };
       };
 

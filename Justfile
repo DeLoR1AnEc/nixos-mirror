@@ -7,9 +7,16 @@ default:
 
 # ==== Misc ====
 
-# Displays the terminal color codes
+# Build the installer image
+[group('nix')]
 [linux]
-colors *args="":
+build:
+    nix build "./installer#" --log-format bar --rebuild --repair
+
+# Flash the installer image to drive
+[group('nix')]
+[linux]
+flash drive:
     #!/usr/bin/env nu
     use {{ utils }} *;
-    colors {{ args }}
+    flash {{ drive }}

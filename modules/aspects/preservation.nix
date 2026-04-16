@@ -11,7 +11,7 @@
     fileSystems."/persistent".neededForBoot = true;
     preservation.preserveAt."/persistent" = {
       directories = [
-        "/lepton"
+        "/config"
 
         "/etc/ssh"
         "/etc/secureboot"
