@@ -12,17 +12,17 @@
     <shell>
 
     # desktop
-    <boot/secure>
-    <boot/greeter>
-    <preservation>
-    <zram>
+    # <boot/secure>
+    # <boot/greeter>
+    # <preservation>
+    # <zram>
 
-    <terminal>
-    <niri>
+    # <terminal>
+    # <niri>
   ];
 
   den.aspects.preset._ = {
-    desktop = den.lib.parametric.atLeast {
+    desktop = {
       includes = [
         <boot/secure>
         <boot/greeter>
