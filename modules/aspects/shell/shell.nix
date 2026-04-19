@@ -30,6 +30,7 @@
         '';
 
         file.xdg_config."nushell/config.nu".source = ./config.nu;
+        file.home."test.file".text = "";
       };
   };
 }
