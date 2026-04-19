@@ -9,8 +9,8 @@
         ];
       };
 
-    maid.file.xdg_config."noctalia/settings.json".source = ./settings.json;
-    maid.file.xdg_config."test".text = ''
+    maid.file.xdg_config_home."noctalia/settings.json".source = ./settings.json;
+    maid.file.xdg_config_home."test".text = ''
       test
     '';
   };

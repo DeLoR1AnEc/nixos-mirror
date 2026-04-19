@@ -8,7 +8,7 @@
     maid =
       { pkgs, ... }:
       {
-        file.xdg_config."foot/foot.ini".text = ''
+        file.xdg_config_home."foot/foot.ini".text = ''
           [main]
           term=foot
           font=Maple Mono NF:size=13
