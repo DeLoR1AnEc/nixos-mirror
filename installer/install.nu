@@ -9,36 +9,36 @@ def main [] {
   let repo = "https://codeberg.org/DeLoRiAnEc/NixOS.git"
   let flake = "/tmp/config"
 
-  # --- Pick a tag -----------------------------------------------
+  # --- Pick a branch --------------------------------------------
   (gum style --foreground 212 "Fetching tags...")
-  let tags_raw = (git ls-remote --tags --refs $repo | complete)
-  if $tags_raw.exit_code != 0 {
-    (gum style --foreground 196 $"Error fetching tags: ($tags_raw.stderr)")
+  let branches_raw = (git ls-remote --heads $repo | complete)
+  if $branches_raw.exit_code != 0 {
+    (gum style --foreground 196 $"Error fetching tags: ($branches_raw.stderr)")
     exit 1
   }
 
-  let tags = (
-    $tags_raw.stdout
+  let branches = (
+    $branches_raw.stdout
     | lines
     | where { |l| ($l | str trim) != "" }
     | each { |l| $l | split row "\t" | last | str replace "refs/tags/" "" }
   )
 
-  if ($tags | is-empty) {
+  if ($branches | is-empty) {
     (gum style --foreground 196 "No tags found.")
     exit 1
   }
 
-  let tag = (
-    $tags
+  let branch = (
+    $branches
     | str join "\n"
     | gum choose --header "Select tag:"
   )
 
   # --- Clone ----------------------------------------------------
-  (gum style --foreground 212 $"Cloning ($tag)…")
+  (gum style --foreground 212 $"Cloning ($branch)…")
   try { rm -r $flake }
-  let clone_raw = (git clone --depth 1 --branch $tag $repo $flake | complete)
+  let clone_raw = (git clone --depth 1 --branch $branch $repo $flake | complete)
   if $clone_raw.exit_code != 0 {
     (gum style --foreground 196 $"Error cloning repo: ($clone_raw.stderr)")
     exit 1

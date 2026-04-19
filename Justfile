@@ -1,24 +1,30 @@
-set shell := ["nu", "-c"]
-
-utils := absolute_path("utils.nu")
+set shell := ["nu", "--env-config", "./utils.nu", "-c"]
+set quiet := true
 
 default:
-    @just --list
+    just --list
 
-# ==== Installer ====
+# ==== Nix ====
+
+# Update inputs
+[group('nix')]
+[linux]
+update:
+    nix flake update
+    follow
+
+# ==== Install ====
 
 # Build the installer image
-[group('nix')]
+[group('install')]
 [linux]
 build:
     nix build "./installer#" --log-format bar --rebuild --repair
 
 # Flash the installer image to drive
-[group('nix')]
+[group('install')]
 [linux]
 flash drive:
-    #!/usr/bin/env nu
-    use {{ utils }} *
     flash {{ drive }}
 
 # ==== Misc =====
@@ -26,6 +32,4 @@ flash drive:
 # Print the ansi colors
 [linux]
 color args="":
-    #!/usr/bin/env nu
-    use {{ utils }} *
     color {{ args }}
