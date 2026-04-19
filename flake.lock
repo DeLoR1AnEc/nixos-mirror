@@ -2,8 +2,14 @@
   "nodes": {
     "blueprint": {
       "inputs": {
-        "nixpkgs": ["nixos-facter", "nixpkgs"],
-        "systems": ["nixos-facter", "systems"]
+        "nixpkgs": [
+          "nixos-facter",
+          "nixpkgs"
+        ],
+        "systems": [
+          "nixos-facter",
+          "systems"
+        ]
       },
       "locked": {
         "lastModified": 1776249299,
@@ -36,11 +42,11 @@
     },
     "den": {
       "locked": {
-        "lastModified": 1776574756,
-        "narHash": "sha256-ve4/2NaH0/Se7J84QDnPkf95fJuDi29emDwmc1nvkGE=",
+        "lastModified": 1776591628,
+        "narHash": "sha256-jzC5LN3DaIQ6lSF/P7Gkxrp8oyRW2Kk+Ebb4Px/mwcg=",
         "owner": "vic",
         "repo": "den",
-        "rev": "cc422d0a79397be8b6f5a6bfb48a2f5ada44b251",
+        "rev": "c5a49c0cb346ae3c4a1e70d8a303a3bd0d9ff43c",
         "type": "github"
       },
       "original": {
@@ -69,7 +75,10 @@
     },
     "disko_2": {
       "inputs": {
-        "nixpkgs": ["nixos-facter", "nixpkgs"]
+        "nixpkgs": [
+          "nixos-facter",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1762276996,
@@ -103,7 +112,10 @@
     },
     "flake-parts": {
       "inputs": {
-        "nixpkgs-lib": ["nur", "nixpkgs"]
+        "nixpkgs-lib": [
+          "nur",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1733312601,
@@ -121,7 +133,10 @@
     },
     "flake-utils": {
       "inputs": {
-        "systems": ["nixos-facter", "systems"]
+        "systems": [
+          "nixos-facter",
+          "systems"
+        ]
       },
       "locked": {
         "lastModified": 1731533236,
@@ -157,7 +172,11 @@
     },
     "gitignore": {
       "inputs": {
-        "nixpkgs": ["lanzaboote", "pre-commit", "nixpkgs"]
+        "nixpkgs": [
+          "lanzaboote",
+          "pre-commit",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1709087332,
@@ -175,9 +194,18 @@
     },
     "hwinfo": {
       "inputs": {
-        "blueprint": ["nixos-facter", "blueprint"],
-        "nixpkgs": ["nixos-facter", "nixpkgs"],
-        "systems": ["nixos-facter", "systems"]
+        "blueprint": [
+          "nixos-facter",
+          "blueprint"
+        ],
+        "nixpkgs": [
+          "nixos-facter",
+          "nixpkgs"
+        ],
+        "systems": [
+          "nixos-facter",
+          "systems"
+        ]
       },
       "locked": {
         "lastModified": 1762279079,
@@ -452,11 +480,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1776587421,
-        "narHash": "sha256-rO2dca1U5xao5BMg+Os2HySVmQlq5hR49NNrGc9dEkg=",
+        "lastModified": 1776592983,
+        "narHash": "sha256-3H6SsdkCGcIETSvugYXA0oWDTXGS1N4gSwnn3GTf3tM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "11f5d7471f1999a8130e953209765a19f2fb74e5",
+        "rev": "78543b2992b86deef48dabfe585764e12dc9df21",
         "type": "github"
       },
       "original": {
@@ -469,7 +497,10 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "gitignore": "gitignore",
-        "nixpkgs": ["lanzaboote", "nixpkgs"]
+        "nixpkgs": [
+          "lanzaboote",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1772893680,
@@ -520,7 +551,10 @@
     },
     "rust-overlay": {
       "inputs": {
-        "nixpkgs": ["lanzaboote", "nixpkgs"]
+        "nixpkgs": [
+          "lanzaboote",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1773544328,
@@ -605,7 +639,10 @@
     },
     "treefmt-nix": {
       "inputs": {
-        "nixpkgs": ["nixos-facter", "nixpkgs"]
+        "nixpkgs": [
+          "nixos-facter",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1775636079,
