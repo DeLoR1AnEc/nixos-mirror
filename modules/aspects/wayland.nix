@@ -12,14 +12,14 @@
 
     maid =
       {
-        file.".config/gtk-3.0/bookmarks".text = ''
+        file.xdg_config."gtk-3.0/bookmarks".text = ''
           "file:///{{home}}/downloads Downloads"
           "file:///{{home}}/documents Documents"
           "file:///{{home}}/coding Coding"
           "file:///{{home}}/pictures Pictures"
         '';
 
-        file.".config/gtk-3.0/settings.ini".text = ''
+        file.xdg_config."gtk-3.0/settings.ini".text = ''
           [Settings]
           gtk-decoration-layout=appmenu:none
         '';
