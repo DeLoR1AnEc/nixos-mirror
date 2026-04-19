@@ -30,6 +30,7 @@
         <zram>
 
         <terminal>
+        <browser>
         <niri>
       ];
     };
