@@ -9,6 +9,6 @@
         ];
       };
 
-    maid.file.xdg_config."noctalia/settings.json".source = ./settings.json;
+    nix-maid.file.xdg_config."noctalia/settings.json".source = ./settings.json;
   };
 }

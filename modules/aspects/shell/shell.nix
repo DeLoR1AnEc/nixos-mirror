@@ -9,7 +9,7 @@
         users.defaultUserShell = pkgs.bashInteractive;
       };
 
-    maid =
+    nix-maid =
       {
         file.home.".bash_profile".text = ''
           # Programming Languages
