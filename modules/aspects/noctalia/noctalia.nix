@@ -10,8 +10,8 @@
       };
 
     maid.file.xdg_config."noctalia/settings.json".source = ./settings.json;
-    maid.file.xdg_config."noctalia/settings.json".text = ''
-      { }
+    maid.file.xdg_config."test".text = ''
+      test
     '';
   };
 }
