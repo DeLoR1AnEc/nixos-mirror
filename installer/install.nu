@@ -21,7 +21,7 @@ def main [] {
     $branches_raw.stdout
     | lines
     | where { |l| ($l | str trim) != "" }
-    | each { |l| $l | split row "\t" | last | str replace "refs/tags/" "" }
+    | each { |l| $l | split row "\t" | last | str replace "refs/heads/" "" }
   )
 
   if ($branches | is-empty) {
@@ -85,7 +85,7 @@ def main [] {
   }
 
   # ── Confirm ───────────────────────────────────────────────────
-  let confirmed = try { gum confirm $"Install ($host) from tag '($tag)' onto ($disk)? This will ERASE the disk."; true } catch { false }
+  let confirmed = try { gum confirm $"Install ($host) from branch '($branch)' onto ($disk)? This will ERASE the disk."; true } catch { false }
   if not $confirmed {
     (gum style --foreground 196 "Aborted.")
     exit 1
