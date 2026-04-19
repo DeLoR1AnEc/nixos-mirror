@@ -29,7 +29,7 @@
           export PATH="{{home}/.local/bin:$GOPATH:$CARGO_HOME:$NPM_CONFIG_PREFIX:$PATH"
         '';
 
-        file.xdg_config_home."nushell/config.nu".source = ./config.nu;
+        file.xdg_config."nushell/config.nu".source = ./config.nu;
       };
   };
 }
