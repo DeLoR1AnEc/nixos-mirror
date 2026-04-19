@@ -13,6 +13,6 @@
         programs.niri.enable = true;
       };
 
-    # maid.file.xdg_config."niri/config.kdl".source = toString ./config.kdl;
+    file.xdg_config."niri/config.kdl".source = ./config.kdl;
   };
 }
