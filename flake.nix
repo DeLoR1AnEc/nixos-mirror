@@ -13,8 +13,8 @@
     nur.url = "github:nix-community/NUR";
 
     # Maid
-    # nix-maid.url = "github:viperML/nix-maid";
-    nix-maid.url = "github:DeLoR1AnEc/nix-maid";
+    nix-maid.url = "github:viperML/nix-maid";
+    # nix-maid.url = "github:DeLoR1AnEc/nix-maid";
 
     # Dendritic
     den.url = "github:vic/den";
