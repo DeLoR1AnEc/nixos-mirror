@@ -86,5 +86,5 @@ export def follow [] {
   $lock
   | update nodes $new_nodes
   | to json --indent 2
-  | save --force new.lock
+  | save --force flake.lock
 }
