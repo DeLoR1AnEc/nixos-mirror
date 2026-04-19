@@ -27,6 +27,7 @@
     # Programms
     sops-nix.url = "github:Mic92/sops-nix";
     sysc-greet.url = "github:Nomadcxx/sysc-greet";
+    # sysc-greet.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote";
     preservation.url = "github:nix-community/preservation";
     nix-index-database.url = "github:nix-community/nix-index-database";

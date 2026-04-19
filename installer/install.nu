@@ -6,7 +6,7 @@ def main [] {
     --align center --width 50 --margin "1 2"
     "NixOS Installer")
 
-  let repo = "https://codeberg.org/DeLoRiAnEc/NixOS"
+  let repo = "https://codeberg.org/DeLoRiAnEc/NixOS.git"
   let flake = "/tmp/config"
 
   # --- Pick a tag -----------------------------------------------
@@ -21,7 +21,7 @@ def main [] {
     $tags_raw.stdout
     | lines
     | where { |l| ($l | str trim) != "" }
-    | each { |l| $l | splitr row "\t" | last | str replace "refs/tags/" "" }
+    | each { |l| $l | split row "\t" | last | str replace "refs/tags/" "" }
   )
 
   if ($tags | is-empty) {

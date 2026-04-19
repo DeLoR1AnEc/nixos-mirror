@@ -5,7 +5,7 @@ utils := absolute_path("utils.nu")
 default:
     @just --list
 
-# ==== Misc ====
+# ==== Installer ====
 
 # Build the installer image
 [group('nix')]
@@ -18,5 +18,14 @@ build:
 [linux]
 flash drive:
     #!/usr/bin/env nu
-    use {{ utils }} *;
+    use {{ utils }} *
     flash {{ drive }}
+
+# ==== Misc =====
+
+# Print the ansi colors
+[linux]
+color args="":
+    #!/usr/bin/env nu
+    use {{ utils }} *
+    color {{ args }}

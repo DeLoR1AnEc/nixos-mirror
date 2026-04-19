@@ -15,33 +15,34 @@
               disko
               neovim
               nushell
+              e2fsprogs
             ];
+
+            services.openssh.enable = true;
+            programs.ssh.startAgent = true;
+
+            nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+            services.getty.autologinUser = nixpkgs.lib.mkForce "root";
+            environment.loginShellInit = ''
+              if [ "$(tty)" = "/dev/tty1" ]; then
+              echo ""
+              echo " ______________________      "
+              echo "< Run: nu /etc/install >     "
+              echo " ----------------------      "
+              echo "        \   ^__^             "
+              echo "         \  (oo)\_______     "
+              echo "            (__)\       )\/\ "
+              echo "                ||----w |    "
+              echo "                ||     ||    "
+              echo ""
+              fi
+            '';
+
+            environment.etc."install".source = ./install.nu;
+            image.baseName = nixpkgs.lib.mkForce "installer";
           })
         ];
-
-        services.openssh.enable = true;
-        programs.ssh.startAgent = true;
-
-        nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-        services.getty.autologinUser = nixpkgs.lib.mkForce "root";
-        environment.loginShellInit = ''
-          if [ "$(tty)" = "/dev/tty1" ]; then
-          echo ""
-          echo " ______________________      "
-          echo "< Run: nu /etc/install >     "
-          echo " ----------------------      "
-          echo "        \   ^__^             "
-          echo "         \  (oo)\_______     "
-          echo "            (__)\       )\/\ "
-          echo "                ||----w |    "
-          echo "                ||     ||    "
-          echo ""
-          fi
-        '';
-
-        environment.etc."install".source = ./install.nu;
-        image.baseName = nixpkgs.lib.mkForce "installer";
       };
     in
     {

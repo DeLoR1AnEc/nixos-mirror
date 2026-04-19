@@ -27,7 +27,7 @@
           keep-derivations = true;
           use-xdg-base-directories = true;
           auto-optimise-store = true;
-          trusted-trusted-users = [ "@wheel" ];
+          trusted-users = [ "@wheel" ];
 
           experimental-features = [ "nix-command" "flakes" ];
 
