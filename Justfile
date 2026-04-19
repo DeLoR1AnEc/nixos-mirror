@@ -11,7 +11,6 @@ default:
 [linux]
 update:
     nix flake update
-    follow
 
 # ==== Install ====
 

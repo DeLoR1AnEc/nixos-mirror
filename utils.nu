@@ -52,39 +52,3 @@ export def color [--invert (-i)] {
   | each { |n| do $print_color $n $invert }
   print ""
 }
-
-export def follow [] {
-  let get_base = { |s| $s | str replace -r '_\d+$' '' }
-  let lock = open flake.lock | from json
-
-  let new_nodes = $lock.nodes
-    | transpose name val
-    | reduce -f {} { |node, acc|
-      if $node.name != (do $get_base $node.name) { return $acc }
-
-      let inputs = $node.val.inputs?
-        | default {}
-        | transpose k v
-        | update v { |i|
-          if ($i.v | describe | str starts-with "list") {
-            $i.v | last | do $get_base $in
-          } else {
-            do $get_base $i.v
-          }
-        }
-        | transpose -r -d
-
-      let val = if ($inputs | is-empty) {
-        $node.val | reject inputs?
-      } else {
-        $node.val | upsert inputs $inputs
-      }
-
-      $acc | insert $node.name $val
-    }
-
-  $lock
-  | update nodes $new_nodes
-  | to json --indent 2
-  | save --force flake.lock
-}

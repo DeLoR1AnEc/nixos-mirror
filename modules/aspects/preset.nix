@@ -20,6 +20,7 @@
         <zram>
 
         <niri>
+        <terminal>
       ];
     };
   };
