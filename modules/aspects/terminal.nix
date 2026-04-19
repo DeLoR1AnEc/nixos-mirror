@@ -5,7 +5,7 @@
       {
         environment.systemPackages = [ pkgs.foot ];
       };
-    nix-maid =
+    maid =
       { pkgs, ... }:
       {
         file.xdg_config."foot/foot.ini".text = ''
