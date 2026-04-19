@@ -20,8 +20,8 @@
         <preservation>
         <zram>
 
-        <niri>
         <terminal>
+        <niri>
       ];
     };
   };
