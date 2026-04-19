@@ -7,9 +7,6 @@ in
   den.aspects.${name} = {
     includes = [
       <preset/desktop>
-
-      <boot/secure>
-      <preservation>
     ];
 
     nixos = {

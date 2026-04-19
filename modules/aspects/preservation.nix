@@ -25,6 +25,7 @@
         "/var/lib/bluetooth"
         "/var/NetworkManager"
         "/var/tailscale"
+        "/var/db/sudo/lectured"
       ];
       files = [
         { file = "/etc/machine-id"; inInitrd = true; }

@@ -15,6 +15,7 @@
   den.aspects.preset._ = {
     desktop = den.lib.parametric.atLeast {
       includes = [
+        <boot/secure>
         <boot/greeter>
         <preservation>
         <zram>
