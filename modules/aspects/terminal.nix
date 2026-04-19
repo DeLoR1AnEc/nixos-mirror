@@ -1,5 +1,5 @@
 {
-  den.aspects.apps._.foot.maid =
+  den.aspects.terminal.maid =
     { pkgs, ... }:
     {
       packages = [ pkgs.foot ];
