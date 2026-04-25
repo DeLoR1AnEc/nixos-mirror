@@ -31,6 +31,16 @@
         services.sysc-greet.enable = true;
         services.sysc-greet.compositor = "niri";
       };
+
+      menu.nixos =
+        { pkgs, ...}:
+        {
+          environment.systemPackages = with pkgs; [
+            refind
+            efibootmgr
+            sbsigntool
+          ];
+        };
     };
   };
 }

@@ -9,7 +9,6 @@
         gnumake
         nushell
         python3
-        git
         gum
 
         # System Monitoring

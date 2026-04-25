@@ -9,16 +9,8 @@
     <xdg>
 
     <apps>
+    <nix>
     <shell>
-
-    # desktop
-    # <boot/secure>
-    # <boot/greeter>
-    # <preservation>
-    # <zram>
-
-    # <terminal>
-    # <niri>
   ];
 
   den.aspects.preset._ = {
