@@ -1,4 +1,4 @@
-{ den, __findFile, ... }:
+{ __findFile, ... }:
 {
   den.default.includes = [
     <boot>
@@ -8,8 +8,8 @@
     <secrets>
     <xdg>
 
+    <git>
     <apps>
-    <nix>
     <shell>
   ];
 
