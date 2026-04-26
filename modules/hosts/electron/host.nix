@@ -1,4 +1,4 @@
-{ inputs, dlib, __findFile, ... }:
+{ inputs, flib, __findFile, ... }:
 let
   name = "electron";
 in
@@ -16,5 +16,5 @@ in
       hardware.facter.reportPath = ./facter.json;
       fileSystems."/log".neededForBoot = true;
     };
-  } // dlib.withUser [ <presets/desktop> ];
+  } // flib.withUser [ <presets/desktop> ];
 }
