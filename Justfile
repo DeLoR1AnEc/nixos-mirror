@@ -17,6 +17,7 @@ update:
 [no-cd]
 switch host:
     sudo nixos-rebuild switch --flake .#{{ host }}
+    activate
 
 # ==== Install ====
 
