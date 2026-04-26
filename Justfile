@@ -16,6 +16,7 @@ update:
 [linux]
 switch host:
     nixos-rebuild switch --flake .#{{ host }}
+    activate
 
 # ==== Install ====
 
