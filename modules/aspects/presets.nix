@@ -22,16 +22,18 @@
     # <niri>
   ];
 
-  den.aspects.presets._ = den.lib.parametric {
-    desktop.includes = [
-      <boot/secure>
-      <boot/greeter>
-      <preservation>
-      <zram>
+  den.aspects.presets._ = {
+    desktop = den.lib.parametric {
+      includes = [
+        <boot/secure>
+        <boot/greeter>
+        <preservation>
+        <zram>
 
-      <terminal>
-      <browser>
-      <niri>
-    ];
+        <terminal>
+        <browser>
+        <niri>
+      ];
+    };
   };
 }
