@@ -31,7 +31,7 @@ flash drive:
 
 # Generate an ssh key
 [group('install')]
-ssh-generate host:
+ssh host:
     sudo ssh-keygen -t ed25519 -C "{{ host }}" -f /etc/ssh/host
     ssh-keygen -t ed25519 -C "{{ host }}" -f ~/.ssh/host
 
