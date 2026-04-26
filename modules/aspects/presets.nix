@@ -14,7 +14,7 @@
   ];
 
   den.aspects.presets._ = {
-    desktop = den.lib.perUser {
+    desktop = {
       includes = [
         <boot/secure>
         <boot/greeter>
