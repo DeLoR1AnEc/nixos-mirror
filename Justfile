@@ -38,7 +38,7 @@ ssh-generate host:
 # Unlock /config for the user
 [group('install')]
 unlock:
-    chown -R $USER:users /config
+    chown -R $env.USER:users /config
 
 # ==== Misc =====
 
