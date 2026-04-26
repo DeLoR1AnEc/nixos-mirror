@@ -14,4 +14,4 @@
 7. You're done!
 
 # TODO
-[x] Add todos lmao
+[x] (Add todos lmao)
