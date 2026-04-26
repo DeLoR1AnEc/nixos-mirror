@@ -15,7 +15,6 @@ update:
 [group('nix')]
 [linux]
 switch host:
-    git pull
     nixos-rebuild switch --flake .#{{ host }}
 
 # ==== Install ====
