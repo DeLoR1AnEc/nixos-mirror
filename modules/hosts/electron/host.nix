@@ -3,10 +3,10 @@ let
   name = "electron";
 in
 {
-  den.hosts.x86_64-linux.${name}.users.delorianec = {};
+  den.hosts.x86_64-linux.${name}.users.delorianec.includes = [
+    <presets/desktop>
+  ];
   den.aspects.${name} = {
-    includes = [ <presets/desktop> <niri> ];
-
     nixos = {
       imports = [
         inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
