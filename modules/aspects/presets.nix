@@ -4,6 +4,7 @@
     <boot>
 
     <networking>
+    <networking/ssh>
     <locales>
     <secrets>
     <xdg>
