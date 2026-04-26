@@ -60,23 +60,6 @@ def main [] {
     | gum choose --header "Select host to install:"
   )
 
-  # ── Pick a disk ───────────────────────────────────────────────
-  let disko_file = $"($flake)/modules/hosts/($host)/_disko.nix"
-
-  (gum style --foreground 99 "Available disks:")
-  lsblk -d -o NAME,SIZE,MODEL | grep -v loop
-
-  let disk = (
-    lsblk -d -o NAME --noheadings
-    | lines
-    | where { |l| ($l | str trim) != "" and not ($l | str contains "loop") }
-    | each { |l| $"/dev/($l | str trim)" }
-    | str join "\n"
-    | gum choose --header "Select target disk (ALL DATA WILL BE ERASED):"
-  )
-
-  sed -i $"s|device = \"\";|device = \"($disk)\";|" $disko_file
-
   # ── Facter ────────────────────────────────────────────────────
   let do_facter = try { gum confirm $"Regenerate facter.json for ($host)?"; true } catch { false }
   if $do_facter {
@@ -85,18 +68,17 @@ def main [] {
   }
 
   # ── Confirm ───────────────────────────────────────────────────
-  let confirmed = try { gum confirm $"Install ($host) from branch '($branch)' onto ($disk)? This will ERASE the disk."; true } catch { false }
+  let confirmed = try { gum confirm $"Install ($host) from branch '($branch)'? This will ERASE the disk."; true } catch { false }
   if not $confirmed {
     (gum style --foreground 196 "Aborted.")
     exit 1
   }
 
   # ── Install ───────────────────────────────────────────────────
-  (gum style --foreground 212 $"Installing ($host) onto ($disk)…")
+  (gum style --foreground 212 $"Installing ($host)…")
 
   (gum style --foreground 212 "Running disko…")
   nix run nixpkgs#disko -- --mode disko --flake $"($flake)#($host)"
-  sed -i $"s|device = \"($disk)\";|device = \"\";|" $disko_file
 
   (gum style --foreground 212 "Generating secure boot keys…")
   sbctl create-keys
