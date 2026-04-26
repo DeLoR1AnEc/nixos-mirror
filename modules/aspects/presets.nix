@@ -13,20 +13,16 @@
     <shell>
   ];
 
-  den.aspects.presets._ = {
-    desktop =
-      { host, ... }:
-      {
-        includes = [
-          <boot/secure>
-          <boot/greeter>
-          <preservation>
-          <zram>
+  den.aspects.desktop = {
+    includes = [
+      <boot/secure>
+      <boot/greeter>
+      <preservation>
+      <zram>
 
-          <terminal>
-          <browser>
-          <niri>
-        ];
-      };
+      <terminal>
+      <browser>
+      <niri>
+    ];
   };
 }

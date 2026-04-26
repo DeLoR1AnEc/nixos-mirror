@@ -5,7 +5,7 @@ in
 {
   den.hosts.x86_64-linux.${name}.users.delorianec = {};
   den.aspects.${name} = {
-    includes = [ <presets/desktop> ];
+    includes = [ <desktop> ];
 
     nixos = {
       imports = [
