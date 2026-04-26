@@ -1,14 +1,12 @@
-{ inputs, dlib, __findFile, ... }:
+{ inputs, __findFile, ... }:
 let
-  name = "electron";
+  name = "tau";
 in
 {
   den.hosts.x86_64-linux.${name}.users.delorianec = {};
   den.aspects.${name} = {
     nixos = {
       imports = [
-        inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t480
-
         inputs.disko.nixosModules.default
         ./_disko.nix
       ];
@@ -16,5 +14,5 @@ in
       hardware.facter.reportPath = ./facter.json;
       fileSystems."/log".neededForBoot = true;
     };
-  } // dlib.withUsers [ <presets/desktop> ];
+  };
 }
