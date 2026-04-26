@@ -14,7 +14,7 @@ update:
 [group('nix')]
 [no-cd]
 switch host:
-    sudo nixos-rebuild switch --flake .#{{ host }}
+    nh os switch -a .#{{ host }}
     activate
 
 # ==== Install ====
