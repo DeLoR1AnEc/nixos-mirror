@@ -1,4 +1,4 @@
-{ __findFile, ... }:
+{ den, __findFile, ... }:
 {
   den.default.includes = [
     <boot>
@@ -12,26 +12,26 @@
     <apps>
     <shell>
 
-    <boot/secure>
-    <boot/greeter>
-    <preservation>
-    <zram>
+    # <boot/secure>
+    # <boot/greeter>
+    # <preservation>
+    # <zram>
 
-    <terminal>
-    <browser>
-    <niri>
+    # <terminal>
+    # <browser>
+    # <niri>
   ];
 
-  den.aspects.presets._ = {
+  den.aspects.presets._ = den.lib.parametric {
     desktop.includes = [
-      # <boot/secure>
-      # <boot/greeter>
-      # <preservation>
-      # <zram>
+      <boot/secure>
+      <boot/greeter>
+      <preservation>
+      <zram>
 
-      # <terminal>
-      # <browser>
-      # <niri>
+      <terminal>
+      <browser>
+      <niri>
     ];
   };
 }
