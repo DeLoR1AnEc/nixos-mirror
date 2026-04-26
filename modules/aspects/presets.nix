@@ -14,15 +14,17 @@
   ];
 
   den.aspects.presets._ = {
-    desktop.includes = [
-      <boot/secure>
-      <boot/greeter>
-      <preservation>
-      <zram>
+    desktop = den.lib.perUser {
+      includes = [
+        <boot/secure>
+        <boot/greeter>
+        <preservation>
+        <zram>
 
-      <terminal>
-      <browser>
-      <niri>
-    ];
+        <terminal>
+        <browser>
+        <niri>
+      ];
+    };
   };
 }

@@ -1,11 +1,11 @@
-{ inputs, den, __findFile, ... }:
+{ inputs, __findFile, ... }:
 let
   name = "electron";
 in
 {
   den.hosts.x86_64-linux.${name}.users.delorianec = {};
   den.aspects.${name} = {
-    includes = [ (den.lib.perUser <presets/desktop>) ];
+    includes = [ <presets/desktop> ];
 
     nixos = {
       imports = [
