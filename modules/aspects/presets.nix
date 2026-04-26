@@ -13,7 +13,7 @@
     <shell>
   ];
 
-  den.aspects.preset._ = {
+  den.aspects.presets._ = {
     desktop = {
       includes = [
         <boot/secure>
