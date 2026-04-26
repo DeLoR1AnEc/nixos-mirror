@@ -23,7 +23,7 @@
 
         <terminal>
         <browser>
-        <niri>
+        # <niri>
       ];
     };
   };
