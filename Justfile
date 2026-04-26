@@ -35,6 +35,11 @@ ssh-generate host:
     sudo ssh-keygen -t ed25519 -C "{{ host }}" -f /etc/ssh/host
     ssh-keygen -t ed25519 -C "{{ host }}" -f ~/.ssh/host
 
+# Unlock /config for the user
+[group('install')]
+unlock:
+    chown -R $USER:users /config
+
 # ==== Misc =====
 
 # Print the ansi colors
