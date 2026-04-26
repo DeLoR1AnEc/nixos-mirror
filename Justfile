@@ -14,6 +14,7 @@ update:
 # Rebuild and switch config
 [group('nix')]
 [linux]
+[no-cd]
 switch host:
     nixos-rebuild switch --flake .#{{ host }}
     activate
