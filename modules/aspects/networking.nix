@@ -10,7 +10,7 @@
       environment.enableAllTerminfo = true;
       programs.ssh.extraConfig = ''
         Host *
-          IdentityFile /etc/ssh/host
+          IdentityFile ~/.ssh/host
       '';
       services.openssh = {
         enable = true;
