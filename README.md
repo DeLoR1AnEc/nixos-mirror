@@ -1,3 +1,6 @@
+> [!warning] WARNING 
+> Please note that this config may not work on your machine as is.]
+
 # Install Process
 ## Building from source and flashing
 1. `sudo just build`
