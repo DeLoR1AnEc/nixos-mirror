@@ -40,3 +40,8 @@ ssh-generate host:
 [group('misc')]
 color args="":
     color {{ args }}
+
+# Get current power level
+[group('misc')]
+power:
+    cat /sys/class/power_supply/BAT0/capacity
