@@ -7,13 +7,11 @@ default:
 
 # Update inputs
 [group('nix')]
-[linux]
 update:
     nix flake update
 
 # Rebuild and switch config
 [group('nix')]
-[linux]
 [no-cd]
 switch host:
     sudo nixos-rebuild switch --flake .#{{ host }}
@@ -23,20 +21,22 @@ switch host:
 
 # Build the installer image
 [group('install')]
-[linux]
 build:
     nix build "./installer#" --log-format bar --rebuild --repair
 
 # Flash the installer image to drive
 [group('install')]
-[linux]
 flash drive:
     flash {{ drive }}
+
+# Generate an ssh key
+[group('install')]
+ssh-generate host:
+    ssh-keygen -t ed25519 -C "{{ host }}" -f /etc/ssh/{{ host }}
 
 # ==== Misc =====
 
 # Print the ansi colors
 [group('misc')]
-[linux]
 color args="":
     color {{ args }}
