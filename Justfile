@@ -1,5 +1,4 @@
 set shell := ["nu", "--env-config", "./utils.nu", "-c"]
-set quiet := true
 
 default:
     just --list
