@@ -13,8 +13,8 @@
     <shell>
   ];
 
-  den.aspects.desktop = {
-    includes = [
+  den.aspects.presets._ = {
+    desktop.includes = [
       <boot/secure>
       <boot/greeter>
       <preservation>
