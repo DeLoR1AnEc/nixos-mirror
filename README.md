@@ -1,5 +1,5 @@
-> [!warning] WARNING 
-> Please note that this config may not work on your machine as is.]
+> [!WARNING] 
+> Please note that this config may not work on your machine as is.
 
 # Install Process
 ## Building from source and flashing
