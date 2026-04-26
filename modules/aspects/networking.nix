@@ -8,13 +8,10 @@
 
     _.ssh.nixos = {
       environment.enableAllTerminfo = true;
-      programs.ssh = {
-        startAgent = true;
-        extraConfig = ''
-          Host *
-            IndentityFile /etc/ssh/host
-        '';
-      };
+      programs.ssh.extraConfig = ''
+        Host *
+          IndentityFile /etc/ssh/host
+      '';
       services.openssh = {
         enable = true;
         settings = {
