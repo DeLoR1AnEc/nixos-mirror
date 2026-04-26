@@ -11,29 +11,22 @@
     <git>
     <apps>
     <shell>
-
-    # <boot/secure>
-    # <boot/greeter>
-    # <preservation>
-    # <zram>
-
-    # <terminal>
-    # <browser>
-    # <niri>
   ];
 
   den.aspects.presets._ = {
-    desktop = den.lib.parametric {
-      includes = [
-        <boot/secure>
-        <boot/greeter>
-        <preservation>
-        <zram>
+    desktop =
+      { host, ... }:
+      {
+        includes = [
+          <boot/secure>
+          <boot/greeter>
+          <preservation>
+          <zram>
 
-        <terminal>
-        <browser>
-        <niri>
-      ];
-    };
+          <terminal>
+          <browser>
+          <niri>
+        ];
+      };
   };
 }
