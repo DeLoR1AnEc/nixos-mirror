@@ -12,6 +12,12 @@ default:
 update:
     nix flake update
 
+# Rebuild and switch config
+[group('nix')]
+[linux]
+switch host:
+    nixos-rebuild switch --flake .#{{ host }}
+
 # ==== Install ====
 
 # Build the installer image
@@ -29,6 +35,7 @@ flash drive:
 # ==== Misc =====
 
 # Print the ansi colors
+[group('misc')]
 [linux]
 color args="":
     color {{ args }}
