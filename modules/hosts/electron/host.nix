@@ -3,9 +3,7 @@ let
   name = "electron";
 in
 {
-  den.hosts.x86_64-linux.${name}.users.delorianec.includes = [
-    <presets/desktop>
-  ];
+  den.hosts.x86_64-linux.${name}.users.delorianec = {};
   den.aspects.${name} = {
     nixos = {
       imports = [
