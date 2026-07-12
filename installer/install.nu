@@ -85,9 +85,9 @@ def main [] {
   chattr -i /sys/firmware/efi/efivars/db-* /sys/firmware/efi/efivars/KEK-*
   try { sbctl enroll-keys --microsoft }
 
-  mkdir /mnt/etc/secureboot/
+  mkdir -p /mnt/etc/secureboot/
   cp -r /var/lib/sbctl/keys /mnt/etc/secureboot/keys
-  mkdir /mnt/persistent/etc/secureboot/
+  mkdir -p /mnt/persistent/etc/secureboot/
   cp -r /var/lib/sbctl/keys /mnt/persistent/etc/secureboot/keys
 
   (gum style --foreground 212 "Running nixos-install…")

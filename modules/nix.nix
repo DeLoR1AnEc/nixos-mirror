@@ -41,6 +41,16 @@
         };
       };
 
+      nixpkgs.overlays = [
+        (final: prev:
+          let
+            oldPkgs = import inputs.nixpkgs-old { inherit (prev) system; };
+          in {
+            substitute = oldPkgs.substitute;
+            substituteAll = oldPkgs.substituteAll;
+          })
+      ];
+
       system.stateVersion = "25.11";
     };
 }

@@ -1,0 +1,7 @@
+keys:
+  - &electron age1rhjud5ah73knnl3lxfa0x7eg6psl5038qpzzc4ghjq62e0h6l4lqg3lyn2
+creation_rules:
+  - path_regex: modules/aspects/secrets/secrets.yaml
+    key_groups:
+      - age:
+          - *electron
