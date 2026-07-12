@@ -1,1 +1,2 @@
 # test
+alias vi = nvim

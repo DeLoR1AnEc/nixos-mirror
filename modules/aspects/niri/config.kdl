@@ -23,15 +23,15 @@ input {
 
   // General
   warp-mouse-to-focus mode="center-xy"
-  focus-follow-mouse
+  focus-follows-mouse
 }
 
 // Outputs --- https://niri-wm.github.io/niri/Configuration:-Outputs
 // HDMI-A-2
-output "HDMI-A-2" {
-  variable-refresh-rate on-demand=true
-  hot-corners { off }
-}
+// output "HDMI-A-2" {
+//   variable-refresh-rate on-demand=true
+//   hot-corners { off }
+// }
 
 // Layout --- https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
@@ -44,23 +44,23 @@ layout {
 
   // Tab
   default-column-display "tabbed"
-  tab-indicator { hide-when-single-tab }
+  // tab-indicator { hide-when-single-tab }
 
   // Size
   preset-column-widths {
     proportion 0.33333
     proportion 0.5
     proportion 0.66667
-    proportion 1
+    proportion 1.0
   }
 
-  default-column-width { proportion 1 }
+  // default-column-width { proportion 1
 
   preset-window-heights {
     proportion 0.33333
     proportion 0.5
     proportion 0.66667
-    proportion 1
+    proportion 1.0
   }
 
   // Borders + Focus Rings
