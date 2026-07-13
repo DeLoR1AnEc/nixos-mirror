@@ -6,6 +6,8 @@
     inputs.den.flakeModule
   ];
 
-  den.schema.user.classes = [ "maid" ];
-  den.ctx.user.includes = [ den._.mutual-provider ];
+  den.schema.user = {
+    classes = [ "maid" ];
+    includes = [ den._.mutual-provider ];
+  };
 }

@@ -79,6 +79,9 @@
         psutils
         psmisc
         pciutils
+
+	# Temp
+	fuzzel
       ];
     };
 }

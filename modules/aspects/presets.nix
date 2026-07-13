@@ -24,6 +24,8 @@
       <terminal>
       <browser>
       <niri>
+
+      <bluetooth>
     ];
   };
 }
