@@ -13,6 +13,11 @@
         LC_MEASUREMENT = "de_DE.UTF-8";
       };
 
+      services.xserver.xkb = {
+      	layout = "pl,ru";
+	options = "ctrl:nocaps,compose:menu,grp:toggle";
+      };
+
       fonts.packages = with pkgs; [
         # Icons
         material-design-icons

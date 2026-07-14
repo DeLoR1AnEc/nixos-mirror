@@ -74,14 +74,17 @@
         glow
         hexyl
         imagemagick
+	pavucontrol
         progress
         try
         psutils
         psmisc
         pciutils
+	kew
 
 	# Temp
 	fuzzel
+	vesktop
       ];
     };
 }

@@ -13,6 +13,21 @@ in
 
       hardware.facter.reportPath = ./facter.json;
       fileSystems."/log".neededForBoot = true;
+
+      outputs."HDMI-A-2" = ''
+        mode "1920x1080@60"
+	position x=1920 y=0
+	scale 1.0
+      '';
+
+      outputs."DP-2" = ''
+      	mode "3840x2160@160"
+	position x=0 y=0
+	scale 2.0
+      '';
     };
-  } // dlib.withUsers [ <presets/desktop> ];
+  } // dlib.withUsers [ 
+      <presets/desktop>
+      <gaming>
+    ];
 }
