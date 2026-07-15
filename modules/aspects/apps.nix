@@ -5,7 +5,6 @@
       environment.systemPackages = with pkgs; [
         # Core
         just
-        neovim
         gnumake
         nushell
         python3
@@ -74,17 +73,21 @@
         glow
         hexyl
         imagemagick
-	pavucontrol
+        pavucontrol
         progress
         try
         psutils
         psmisc
         pciutils
-	kew
+        kew
 
-	# Temp
-	fuzzel
-	vesktop
+        # Temp
+        fuzzel
+        vesktop
+        obsidian
       ];
+
+      security.rtkit.enable = true;
+      services.upower.enable = true;
     };
 }

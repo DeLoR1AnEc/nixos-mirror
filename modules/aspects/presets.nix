@@ -1,6 +1,8 @@
-{ __findFile, ... }:
+{ den, __findFile, ... }:
 {
   den.default.includes = [
+    den.batteries.hostname
+
     <boot>
 
     <networking>
@@ -12,6 +14,7 @@
     <git>
     <apps>
     <shell>
+    <neovim>
   ];
 
   den.aspects.presets._ = {
@@ -26,6 +29,7 @@
       <niri>
 
       <bluetooth>
+      <sync>
     ];
   };
 }

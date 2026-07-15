@@ -1,0 +1,19 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local o = vim.opt
+o.number = true
+o.relativenumber = true
+o.mouse = "a"
+o.clipboard = "unnamedplus"
+o.ignorecase = true
+o.smartcase = true
+o.signcolumn = "yes"
+o.updatetime = 250
+o.tabstop = 2
+o.shiftwidth = 2
+o.expandtab = true
+o.termguicolors = true
+o.scrolloff = 8
+o.splitright = true
+o.splitbelow = true

@@ -12,8 +12,7 @@ update:
 
 # Rebuild and switch config
 [group('nix')]
-[no-cd]
-switch host:
+switch host=`hostname`:
     nh os switch -a .#{{ host }}
     activate
 

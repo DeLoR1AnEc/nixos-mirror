@@ -3,7 +3,7 @@
   den.aspects.niri = {
     includes = [
       <wayland>
-      <noctalia>
+      <quickshell>
     ];
 
     nixos =
@@ -21,7 +21,6 @@
 
         fullConfig = ''
           ${builtins.readFile ./config.kdl}
-
           ${outputsKdl}
         '';
       in
